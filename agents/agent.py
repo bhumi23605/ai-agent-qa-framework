@@ -1,10 +1,7 @@
 class SimpleAgent:
     """
-    A simple test agent.
-
-    This is intentionally not an LLM yet.
-    We will replace its internal logic with a real
-    LLM-based agent later.
+    A simple rule-based agent used for testing
+    the QA framework before connecting a real LLM.
     """
 
     def ask(self, question: str) -> str:

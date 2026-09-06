@@ -1,0 +1,20 @@
+[
+    {
+        "id": "TC001",
+        "category": "factual",
+        "input": "What is the capital of France?",
+        "expected": "Paris"
+    },
+    {
+        "id": "TC002",
+        "category": "reasoning",
+        "input": "What is 2 + 2?",
+        "expected": "4"
+    },
+    {
+        "id": "TC003",
+        "category": "unknown",
+        "input": "What is the population of Mars?",
+        "expected": "I don't know."
+    }
+]

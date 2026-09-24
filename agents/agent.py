@@ -1,16 +1,13 @@
+from google import genai
+import os
 class SimpleAgent:
     """
-    A simple rule-based agent used for testing
-    the QA framework before connecting a real LLM.
+    LLM powered agent used by QA evaluation framework. 
     """
 
-    def ask(self, question: str) -> str:
-        question = question.lower().strip()
-
-        if "capital of france" in question:
-            return "The capital of France is Paris."
-
-        if "2 + 2" in question or "2+2" in question:
-            return "The answer is 4."
-
-        return "I don't know."
+    def __init__(self):
+        self.client=genai.Client(api_key=os.environ['GEMINI_API_KEY'])
+    def ask(self,question:str)->str:
+        response=self.client.models.generate_content(model="gemini-3.6-flash",contents=question)
+        return response.text
+    
